@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rolemap>
+
+<!--以下這段可以新增role
+  <roles>
+    <role name="NewRole" />
+  </roles>
+-->
+
+  <permissions>
+    <permission name="ATContentTypes: Add Event" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add File" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add Folder" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add Large Plone Folder" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add News Item" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add Link" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="PloneFormGen: Add Content" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+
+
+
+
+PloneFormGen: Add Content
+  </permissions>
+</rolemap>

@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="mingtak.first">
+
+    <!-- Define new permissions -->
+<!--
+    <permission
+        id="mingtak.testpermission2"
+        title="MINGTAK: Testpermission2"
+        />
+-->
+</configure>
