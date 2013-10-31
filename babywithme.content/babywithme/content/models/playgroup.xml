@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf8'?>
+<model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="daterange" type="zope.schema.Date">
+      <default>2013-01-01</default>
+      <description>揪團有效期間設定</description>
+      <max>2030-12-31</max>
+      <min>2013-01-01</min>
+      <title>揪團期間設定</title>
+    </field>
+    <field name="dataend" type="zope.schema.Date">
+      <default>2030-12-31</default>
+      <description/>
+      <max>2030-12-31</max>
+      <min>2013-01-01</min>
+      <title>至</title>
+    </field>
+    <field name="haveteacher" type="zope.schema.Bool">
+      <default>True</default>
+      <description>若無講師，歡迎各方自薦或推薦！</description>
+      <title>是否已有講師</title>
+      <form:widget type="z3c.form.browser.radio.RadioFieldWidget"/>
+    </field>
+    <field name="fee" type="zope.schema.Int">
+      <default>0</default>
+      <description/>
+      <title>預計每人費用(新台幣)</title>
+    </field>
+    <field name="body" type="plone.app.textfield.RichText">
+      <default>&lt;ul&gt;&#13;
+    &lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;自組&lt;/span&gt;&lt;span style="font-size:16px;"&gt;課程名稱：&lt;/span&gt;&lt;/li&gt;&#13;
+	&lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;預計人數：&lt;/span&gt;&lt;/li&gt;&#13;
+	&lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;適合年齡：&lt;/span&gt;&lt;/li&gt;&#13;
+	&lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;程度：(初學、具基礎、進階或其他說明文字)&lt;/span&gt;&lt;/li&gt;&#13;
+	&lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;預計開課地點：(有提供或未找到，歡迎自薦或推薦)&lt;/span&gt;&lt;/li&gt;&#13;
+	&lt;li&gt;&#13;
+		&lt;span style="font-size:16px;"&gt;其他說明事項：&lt;/span&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+</default>
+      <description>詳細說明自組內容</description>
+      <title>說明</title>
+    </field>
+  </schema>
+</model>

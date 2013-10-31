@@ -1,0 +1,17 @@
+babywithme.content Installation
+-------------------------------
+
+To install babywithme.content using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``babywithme.content`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        babywithme.content
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout

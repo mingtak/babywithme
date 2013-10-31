@@ -1,0 +1,17 @@
+babywithme.i18n Installation
+----------------------------
+
+To install babywithme.i18n using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``babywithme.i18n`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        babywithme.i18n
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout
