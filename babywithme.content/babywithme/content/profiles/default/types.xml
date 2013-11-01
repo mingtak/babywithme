@@ -8,7 +8,6 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
-<!--  <object name="babywithme.content.programset" meta_type="Dexterity FTI" />  -->
   <object name="babywithme.content.playgroup" meta_type="Dexterity FTI" />
   <object name="babywithme.content.album" meta_type="Dexterity FTI" />
 </object>
