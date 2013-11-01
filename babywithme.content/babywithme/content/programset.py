@@ -16,6 +16,7 @@ from zope.lifecycleevent.interfaces import IObjectAddedEvent
 #-------分隔線，以上是自已 import----------------------
 
 from five import grok
+'''
 from z3c.form import group, field
 from zope import schema
 from zope.interface import invariant, Invalid
@@ -79,7 +80,7 @@ class SampleView(grok.View):
 
     # Add view methods here
 
-
+'''
 #-------------以下自定義程式------------------------
 
 
@@ -92,7 +93,7 @@ def changeState(content, event):
     if portal['Members'].has_key(id) and portal['Members'][id].UID() == uid:
         userHomeDir = portal['Members'][id]
         with open ('/home/plone/yyyyy','a') as yyyyy:
-            yyyyy.write('HI, Program Set!')
-
+            yyyyy.write('成功了programSet!')
+#排除於導覽外
     else:
         return
