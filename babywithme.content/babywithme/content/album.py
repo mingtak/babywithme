@@ -32,7 +32,6 @@ class IAlbum(form.Schema, IImageScaleTraversable):
 
     form.model("models/album.xml")
 
-
 # Custom content-type class; objects created for this content type will
 # be instances of this class. Use this class to add content-type specific
 # methods and properties. Put methods that are mainly useful for rendering
@@ -40,7 +39,6 @@ class IAlbum(form.Schema, IImageScaleTraversable):
 
 class Album(Container):
     grok.implements(IAlbum)
-
     # Add your class methods and properties here
 
 
