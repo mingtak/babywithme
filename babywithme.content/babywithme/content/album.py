@@ -1,4 +1,8 @@
 #-*- coding:utf-8 -*-
+from Products.ATContentTypes.lib import constraintypes
+from zope.lifecycleevent.interfaces import IObjectAddedEvent
+from plone import api
+
 from five import grok
 
 from z3c.form import group, field
@@ -14,8 +18,14 @@ from plone.namedfile.field import NamedImage, NamedFile
 from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.namedfile.interfaces import IImageScaleTraversable
 
-
 from babywithme.content import MessageFactory as _
+
+
+
+#寫入測試，寫到/home/plone/yyyyy
+def writeinTest(string='please give me a text string'):
+    with open('/home/plone/yyyyy', 'a') as yyyyy:
+        yyyyy.write(string + '\n')
 
 
 # Interface class; used to define content-type schema.
@@ -61,3 +71,23 @@ class SampleView(grok.View):
     # grok.name('view')
 
     # Add view methods here
+
+'''
+#新增Album,初始化這個目錄,只能新增image
+@grok.subscribe(IAlbum, IObjectAddedEvent)
+def initialAlbum(content, event):
+    writeinTest(str(content.UID()))
+    portal = api.portal.get()
+#    id = str(content.getId())
+    uid = str(content.UID())
+    newAlbum = portal['Members']['ddddd']['ffg']['ddddd'] #  api.content.get(UID=uid)
+
+    #將Album設定只允許Image
+    newAlbum.setConstrainTypesMode(constraintypes.ENABLED)
+    newAlbum.setLocallyAllowedTypes(["Image"])
+    newAlbum.setImmediatelyAddableTypes(["Image"])
+    writeinTest(str(content.getId()))
+    #將Album設為「排除於導覽樹外」
+#    userHomeDir.setExcludeFromNav(True)
+        #reindex
+'''

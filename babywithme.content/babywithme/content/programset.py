@@ -25,7 +25,6 @@ def writeinTest(string='please give me a text string'):
         yyyyy.write(string + '\n')
 
 
-
 #切換blog的workflow狀態
 def changeBlogState(blogFolder, new_state):
     catalog = api.portal.get_tool(name='portal_catalog')
@@ -34,18 +33,14 @@ def changeBlogState(blogFolder, new_state):
         searchState = 'tempStat'
     elif new_state == 'private':
         searchState = 'published'
+
     items = catalog.searchResults({'Creator':ownerId,
                                    'review_state':searchState,
                                    'portal_type':['babywithme.content.album', 
                                                   'babywithme.content.playgroup', 
                                                   'Document']})
-    writeinTest(str(type(items)))
-    writeinTest(str(len(items)))
     if len(items) == 0:
         return
-
-    writeinTest('len(items)>0')
-
     if new_state == 'private':
         for item in items:
             contentObject = api.content.get(UID=item.UID)
@@ -56,7 +51,6 @@ def changeBlogState(blogFolder, new_state):
             contentObject = api.content.get(UID=item.UID)
             api.content.transition(obj=contentObject, transition="publish")
             contentObject.reindexObject()
-
 
 
 #部落格關閉時，將該部落格下面所有published的content改為tmpStat,
@@ -71,8 +65,6 @@ def blogCloseOrReopen(blog, event):
     if portal['Members'].has_key(id) and portal['Members'][id].UID() == uid:
         writeinTest('有call changeBlogState')
         changeBlogState(blogFolder=blog, new_state=event.new_state.id)
-
-
 
 
 ''' 以下暫擱置
