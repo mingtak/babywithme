@@ -52,6 +52,14 @@ def test_suite():
 
         # -*- extra stuff goes here -*-
 
+        # Integration tests for BlogPage
+        ztc.ZopeDocFileSuite(
+            'BlogPage.txt',
+            package='babywithme.content',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
         # Integration tests for programSet
         ztc.ZopeDocFileSuite(
             'programSet.txt',

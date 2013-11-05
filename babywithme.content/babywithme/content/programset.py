@@ -38,7 +38,7 @@ def changeBlogState(blogFolder, new_state):
                                    'review_state':searchState,
                                    'portal_type':['babywithme.content.album', 
                                                   'babywithme.content.playgroup', 
-                                                  'Document']})
+                                                  'babywithme.content.blogpage']})
     if len(items) == 0:
         return
     if new_state == 'private':
@@ -102,10 +102,10 @@ def initialUserHome(content, event):
         userHomeDir = portal['Members'][id]
         #同時將user家目錄改設定只允許Album, Document, playgroup
         userHomeDir.setConstrainTypesMode(constraintypes.ENABLED)
-        userHomeDir.setLocallyAllowedTypes(["Document",
+        userHomeDir.setLocallyAllowedTypes(["babywithme.content.blogpage",
                                             "babywithme.content.album",
                                             "babywithme.content.playgroup"])
-        userHomeDir.setImmediatelyAddableTypes(["Document",
+        userHomeDir.setImmediatelyAddableTypes(["babywithme.content.blogpage",
                                                 "babywithme.content.album",
                                                 "babywithme.content.playgroup"])
         #將使用者家目錄設為「排除於導覽樹外」

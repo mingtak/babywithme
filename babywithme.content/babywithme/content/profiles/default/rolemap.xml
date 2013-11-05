@@ -36,10 +36,15 @@
       <role name="Manager" />
       <role name="Site Administrator" />
     </permission>
+    <permission name="ATContentTypes: Add Document" acquire="False">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+    <permission name="ATContentTypes: Add Image" acquire="True">
+    </permission>
 
 
 
 
-PloneFormGen: Add Content
   </permissions>
 </rolemap>

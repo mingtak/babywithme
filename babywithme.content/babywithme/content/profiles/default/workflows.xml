@@ -8,5 +8,8 @@
   <type type_id="babywithme.content.playgroup">
    <bound-workflow workflow_id="private_and_publish_workflow"/>
   </type>
+  <type type_id="babywithme.content.blogpage">
+   <bound-workflow workflow_id="private_and_publish_workflow"/>
+  </type>
  </bindings>
 </object>

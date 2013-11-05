@@ -19,7 +19,8 @@
   <property name="klass">babywithme.content.playgroup.Playgroup</property>
 
   <property name="behaviors">
-     <element value="plone.app.content.interfaces.INameFromTitle" />
+     <element value="babywithme.content.behaviors.changeid.Ichangeid" />
+<!-- unselect    <element value="plone.app.content.interfaces.INameFromTitle" /> -->
      <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
      <element value="collective.geo.behaviour.interfaces.ICoordinates" />
    </property>

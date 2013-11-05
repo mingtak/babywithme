@@ -10,6 +10,10 @@
 
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
+
+  <!-- inculde package -->
+  <include package=".behaviors" />
+
   <!-- Permission Setting -->
   <include file="permissions.zcml" />
 

@@ -13,6 +13,7 @@ babywithme.content.egg-info/requires.txt
 babywithme.content.egg-info/top_level.txt
 babywithme/content/__init__.py
 babywithme/content/album.py
+babywithme/content/blogpage.py
 babywithme/content/playgroup.py
 babywithme/content/programset.py
 babywithme/content/tests.py
