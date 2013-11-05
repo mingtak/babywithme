@@ -59,6 +59,6 @@ class View(grok.View):
     grok.context(IPlaygroup)
     grok.require('zope2.View')
 
-    # grok.name('view')
+    #grok.name('view')
 
     # Add view methods here

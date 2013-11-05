@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf8'?>
 <model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
-    <field name="daterange" type="zope.schema.Date">
+    <field name="datestart" type="zope.schema.Date">
       <default>2013-01-01</default>
       <description>揪團有效期間設定</description>
       <max>2030-12-31</max>
       <min>2013-01-01</min>
       <title>揪團期間設定</title>
     </field>
-    <field name="dataend" type="zope.schema.Date">
-      <default>2030-12-31</default>
+    <field name="dateend" type="zope.schema.Date">
+      <default>2013-10-31</default>
       <description/>
       <max>2030-12-31</max>
       <min>2013-01-01</min>
